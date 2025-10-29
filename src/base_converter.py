@@ -122,9 +122,9 @@ def convert(number, base, to_base):
     return from_decimal(dec, to_base), True
 
 
-def get_valid_base(prompt_text):
+def get_valid_base(text):
     while True:
-        raw = input(prompt_text)
+        raw = input(text)
         val, ok = parse_decimal_string(raw)
         if ok and (val == 2 or val == 8 or val == 10 or val == 16):
             return val
